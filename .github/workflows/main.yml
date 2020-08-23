@@ -32,3 +32,13 @@ jobs:
 
     - name: Build the current project
       run: cmake --build .
+
+  build_ios:
+    runs-on: [macos-latest]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        lfs: true
+
+    - name: Build the current project
+      run: ./build_ios.sh
