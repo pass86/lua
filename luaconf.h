@@ -775,6 +775,7 @@
     #endif
 #endif
 
+#define LUA_UCID // NOTE: Enable Unicode identifiers
 
 
 
