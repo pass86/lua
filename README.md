@@ -9,11 +9,11 @@ Lua is a powerful, efficient, lightweight, embeddable scripting language.
 * Common
 
     Install CMake
-    
+* 
 * iOS
 
     Install Xcode
-    
+
 * Android
 
     Install NDK
