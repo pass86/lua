@@ -44,7 +44,7 @@ jobs:
       run: ./build_ios.sh
 
   build_android:
-    runs-on: [macos-latest]
+    runs-on: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v2
       with:
@@ -52,3 +52,5 @@ jobs:
 
     - name: Build the current project
       run: ./build_android.sh
+      env:
+        ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk
