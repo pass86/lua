@@ -53,4 +53,4 @@ jobs:
     - name: Build the current project
       run: ./build_android.sh
       env:
-        ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk
+        ANDROID_NDK_ROOT: ${ANDROID_HOME}/ndk/21.3.6528147
