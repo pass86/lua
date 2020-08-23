@@ -51,6 +51,7 @@ jobs:
         lfs: true
 
     - name: Build the current project
-      run: ./build_android.sh
+      run: find /usr/local -name 'android.toolchain.cmake'
+      #run: ./build_android.sh
       env:
         ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk/21.3.6528147
