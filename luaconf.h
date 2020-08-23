@@ -768,6 +768,12 @@
 ** without modifying the main part of the file.
 */
 
+#ifdef __APPLE__ // NOTE: Port to iOS
+  #include <TargetConditionals.h>
+    #if TARGET_OS_IOS
+      #define LUA_IOS
+    #endif
+#endif
 
 
 

@@ -140,6 +140,10 @@
 
 
 static int os_execute (lua_State *L) {
+#ifdef LUA_IOS // NOTE: Port to iOS
+  lua_pushboolean(L, 0);
+  return 1;
+#else
   const char *cmd = luaL_optstring(L, 1, NULL);
   int stat;
   errno = 0;
@@ -150,6 +154,7 @@ static int os_execute (lua_State *L) {
     lua_pushboolean(L, stat);  /* true if there is a shell */
     return 1;
   }
+#endif
 }
 
 
