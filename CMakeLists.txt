@@ -41,3 +41,5 @@ set(lua_files
   )
 
 add_library(lua STATIC ${lua_files})
+add_executable(lua1 lua.c)
+target_link_libraries(lua1 lua)
