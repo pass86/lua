@@ -28,10 +28,10 @@ jobs:
         lfs: true
 
     - name: Generate a Project Buildsystem
-      run: cmake .
+      run: cmake -S . -B build
 
     - name: Build the current project
-      run: cmake --build .
+      run: cmake --build build
 
   build_ios:
     runs-on: [macos-latest]
