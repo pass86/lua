@@ -33,6 +33,6 @@ Lua is a powerful, efficient, lightweight, embeddable scripting language.
 
 * Others
 ```shell script
-cmake .
-cmake --build .
+cmake -S . -B build
+cmake --build build
 ```
