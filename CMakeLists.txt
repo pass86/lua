@@ -42,7 +42,13 @@ set(lua_files
 
 add_library(lua STATIC ${lua_files})
 
-if((NOT IOS) AND (NOT ANDROID))
+if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   add_executable(lua1 lua.c)
   target_link_libraries(lua1 lua)
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+  add_executable(lua1 lua.c)
+  target_link_libraries(lua1 lua)
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+  add_executable(lua1 lua.c)
+  target_link_libraries(lua1 lua m)
 endif()
